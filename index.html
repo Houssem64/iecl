@@ -385,12 +385,12 @@
                     <div class="ml-auto col-lg-5 col-md-6 col-12">
                         <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Feel free to ask us anything</h2>
 
-                        <form  onsubmit="sendEmail(); reset(); return false" action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
-                            <input type="text" class="form-control" name="cf-name" placeholder="Name">
+                        <form  onsubmit-button="sendEmail(); reset(); return false" action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
+                            <input type="text" id="Name" class="form-control" name="cf-name" placeholder="Name">
 
-                            <input type="email" class="form-control" name="cf-email" placeholder="Email">
+                            <input type="email" id="Email" class="form-control" name="cf-email" placeholder="Email">
 
-                            <textarea class="form-control" rows="5" name="cf-message" placeholder="Message"></textarea>
+                            <textarea  id="Message" class="form-control"  rows="5" name="cf-message" placeholder="Message"></textarea>
 
                             <button type="submit" class="form-control" id="submit-button" name="submit">Send Message</button>
                         </form>
@@ -399,7 +399,7 @@
                     <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
                         <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">Where you can <span>find us</span></h2>
 
-                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i> 120-240 Rio de Janeiro - State of Rio de Janeiro, Brazil</p>
+                        <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i> 10025 - Brooklyn,NY</p>
 <!-- How to change your own map point
 	1. Go to Google Maps
 	2. Click on your location point
@@ -494,8 +494,8 @@
 			    From : document.getElementById("Email").value,
 			    Subject : "New contact form",
 			    Body : "Name" + document.getElementById("Name").value
-			          + "<br> Email" + document.getElementById("Email").value 
-			          +"<br> message" + document.getElementById("Message").value
+			          + <br> "Email" + document.getElementById("Email").value 
+			          + <br> "message" + document.getElementById("Message").value
 			}).then(
 			  message => alert("message sent unsuccessfully (jk) :)")
 			);
